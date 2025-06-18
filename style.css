@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Funnel Display", sans-serif;
+}
+h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #281426;
+ 
+}
+
+h2 {
+    color: #281426;
+}
+
+nav {
+    height: 80px;
+    display: flex;
+}
+
+.nav-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 24px;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    gap: 16px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.nav-link {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.nav-link--primary {
+    border: 2px solid #ac4d2b;
+    border-radius: 4px;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.nav-link--primary:hover {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: #281426;
+}
+
+.logo {
+    width: 200px;
+    padding-bottom: 20px;
+}
+
+#landing {
+    background-color:#faf6d5;
+}
+
+header {
+    height: calc(100vh - 80px);
+    background-color: #faf6d5;
+}
+
+.header-container {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.colored-text {
+    color: #FB8571;
+}
+
+
+/*.box {
+    border: 2px solid black;
+    max-width: 500px;
+    box-shadow: 6px 7px 0px 3px  #FB8571;
+    border-radius: 6px;
+}
