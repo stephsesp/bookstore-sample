@@ -156,12 +156,43 @@ button:active {
 
 /* HIGHLIGHTS */
 
-.highlight__wrapper {
+.highlight-wrapper {
     display: flex;
 }
 
 .highlight {
     padding: 0 24px;
     width: calc(100% / 3);
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.highlight_para {
+    text-align: center;
+}
+
+.highlight_subtitle {
+    font-size: 20px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.highlight_img {
+    border: 2px solid #ac4d2b;
+    background-color: #FB8571;
+    border-radius: 5px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    height: 100px;
+    margin: 24px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+i { 
+    font-size: 40px;
+    color: white;
 }
