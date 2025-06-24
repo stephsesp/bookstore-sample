@@ -6,6 +6,9 @@
     box-sizing: border-box;
     font-family: "Funnel Display", sans-serif;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 h1 {
     font-size: 56px;
@@ -36,6 +39,10 @@ body {
     overflow-x: hidden;
 }
 
+.no-cursor {
+    cursor: not-allowed;
+}
+
 .nav-container {
     display: flex;
     width: 100%;
@@ -62,8 +69,17 @@ li {
 }
 
 .nav-link--primary {
-    border: 2px solid #ac4d2b;
+    border: 2px solid #FB8571;
     border-radius: 4px;
+}
+
+.nav-link--primary:hover {
+    background-color: #FB8571;
+    color: white;
+}
+
+.white-hover:hover {
+    color: white;
 }
 
 .nav-link:hover {
@@ -79,11 +95,17 @@ a {
     color: #281426;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 .logo {
     width: 180px;
     padding-bottom: 20px;
     padding-top: 16px;
 }
+
+/* LANDING */
 
 #landing {
     background-color:#fffde8;
@@ -238,5 +260,115 @@ i {
 
 #featured-books {
     background-color: #fffde8;
-    height: 1000px;
+    padding-top: 6vw;
+}
+
+.fa-star, .fa-star-half-alt {
+    color: #FB8571;
+    font-size: 24px;
+}
+
+.book-img {
+    max-height: 380px;
+    transition: all 300ms ease;
+    cursor: no-drop;
+}
+
+.books {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.book {
+    width: 25%;
+    padding: 24px;
+}
+
+.book__img--wrapper {
+    margin-bottom: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+}
+
+.book:hover .book-img {
+    transform: scale(1.03);
+}
+
+.book-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.book-title:hover {
+    text-decoration: underline;
+    cursor: not-allowed;
+}
+
+.book-ratings {
+    margin-bottom: 8px;
+}
+
+.book-price-normal {
+    text-decoration: line-through;
+    padding-right: 6px;
+    color: #bfbfbf;
+}
+
+/* NEWSLETTER */
+
+#newsletter {
+    background-color: #fffde8;
+    color: white;
+}
+
+
+.newsletter__description {
+    text-align: center;
+    color: #281426;
+    padding: 0 0 30px;
+}
+
+.newsletter {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    margin-right: 16px;
+    text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #FB8571;
+}
+
+.footer__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer__logo--img {
+    width: 200px;
+}
+
+.white, .footer-copyright {
+    color: white;
+}
+
+.footer__list {
+    margin-bottom: 24px;
+    font-size: 20px;
+}
+
+.footer__link {
+    padding: 0 8px;
+}
+.footer__container {
+    padding-top: 0;
 }
