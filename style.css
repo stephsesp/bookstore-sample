@@ -78,16 +78,16 @@ li {
     color: white;
 }
 
-.white-hover:hover {
-    color: white;
-}
-
 .nav-link:hover {
     text-decoration: underline;
 }
 
 .nav-link--primary:hover {
     text-decoration: none;
+}
+
+.nav-links {
+    margin-right: 16px;
 }
 
 a {
@@ -99,10 +99,79 @@ a:hover {
     text-decoration: underline;
 }
 
+.white-hover:hover {
+    color: white;
+    text-decoration: none;
+}
+
 .logo {
     width: 180px;
     padding-bottom: 20px;
     padding-top: 16px;
+}
+
+.btn__menu {
+    background-color: transparent;
+    font-size: 40px;
+    border: none;
+    color: #FB8571;
+    display: none;
+}
+
+.menu-open {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.menu__backdrop {
+    position: absolute;
+    background-color: #FB8571;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 300ms ease;
+}
+
+.menu-open .menu__backdrop {
+    visibility: visible;
+    opacity: 1;
+}
+
+.btn__menu--close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    padding: 8px;
+    color: white;
+}
+
+.menu__list {
+    font-size: 50px;
+    padding:  32px 0;
+}
+
+.menu__link {
+    color: white;
+}
+
+.menu__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fa-bars {
+    color: #281426;
+}
+
+.fa-xmark {
+    color: white;
 }
 
 /* LANDING */
@@ -128,10 +197,8 @@ header {
 
 .header-description {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding-top: 24px;
 }
 
 .colored-text {
@@ -167,13 +234,7 @@ button:active {
 
 .header-graphic {
     padding: 20px;
-    max-width: 720px;
     z-index: 2;
-}
-
-.person-reading {
-    height: 100%;
-    padding: 20px;
 }
 
 .container {
@@ -185,6 +246,8 @@ button:active {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+
 
 /* HIGHLIGHTS */
 
@@ -216,13 +279,13 @@ button:active {
 
 .highlight-wrapper {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .highlight {
     padding: 0 24px;
     width: calc(100% / 3);
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
@@ -323,11 +386,11 @@ i {
     color: white;
 }
 
-
 .newsletter__description {
     text-align: center;
     color: #281426;
     padding: 0 0 30px;
+    margin: 0 24px 0 24px;
 }
 
 .newsletter {
@@ -335,9 +398,20 @@ i {
     justify-content: center;
 }
 
-input {
-    margin-right: 16px;
+.name {
+    margin: 0 0px 0 24px;
     text-align: center;
+    width: 300px;
+}
+
+.email {
+    margin: 0 24px 0 24px;
+    text-align: center;
+    width: 300px;
+}
+
+.btn--primary {
+    margin-right: 24px;
 }
 
 /* FOOTER */
@@ -371,4 +445,80 @@ footer {
 }
 .footer__container {
     padding-top: 0;
+}
+
+/* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
+
+@media (max-width: 768px) {
+
+    header {
+        height: 100vh;
+    }
+
+    .header-description {
+        padding: 24px 24px;
+    }
+
+    h1 {
+        font-size: 40px;
+        margin-top: 40px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+    
+    .header-subtitle {
+        margin-top: 16px;
+    }
+
+    .fa-bars {
+        margin-right: 16px;
+    }
+
+    .btn {
+        font-size: 18px;
+    }
+
+    .btn-browse {
+        margin-top: 24px;
+    }
+    
+    .book {
+        width: 50%;
+    }
+
+    .header-graphic {
+        margin-bottom: 60px;
+    }
+}
+@media (max-width: 550px) {
+    .nav-links {
+        display: none;
+    }
+
+    .btn__menu {
+        display: block;
+    }
+
+    .highlight {
+        width: 100%;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .name, .email {
+        padding: 12px 24px;
+        margin: 0 0 24px;
+    }
+
+    .btn--primary {
+        margin: 0 24px 24px;
+        font-size: 18px;
+    }
 }
